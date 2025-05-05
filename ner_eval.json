@@ -1,0 +1,45 @@
+[
+    {
+      "text": "Elon Musk founded SpaceX in California.",
+      "entities": [
+        {"text": "Elon", "label": "LABEL_0"},
+        {"text": "Musk", "label": "LABEL_1"},
+        {"text": "SpaceX", "label": "LABEL_2"},
+        {"text": "California", "label": "LABEL_5"}
+      ]
+    },
+    {
+      "text": "Apple was created by Steve Jobs.",
+      "entities": [
+        {"text": "Apple", "label": "LABEL_2"},
+        {"text": "Steve", "label": "LABEL_1"},
+        {"text": "Jobs", "label": "LABEL_2"}
+      ]
+    },
+    {
+      "text": "Google is headquartered in Mountain View.",
+      "entities": [
+        {"text": "Google", "label": "LABEL_2"},
+        {"text": "Mountain", "label": "LABEL_5"},
+        {"text": "View", "label": "LABEL_6"}
+      ]
+    },
+    {
+      "text": "Bill Gates co-founded Microsoft.",
+      "entities": [
+        {"text": "Bill", "label": "LABEL_0"},
+        {"text": "Gates", "label": "LABEL_1"},
+        {"text": "Microsoft", "label": "LABEL_2"}
+      ]
+    },
+    {
+      "text": "Sundar Pichai became CEO of Google in 2015.",
+      "entities": [
+        {"text": "Sundar", "label": "LABEL_0"},
+        {"text": "Pichai", "label": "LABEL_1"},
+        {"text": "Google", "label": "LABEL_2"},
+        {"text": "2015", "label": "LABEL_4"}
+      ]
+    }
+  ]
+  
