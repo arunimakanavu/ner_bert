@@ -1,11 +1,11 @@
 
-# 🧠 Named Entity Recognition (NER) with BERT
+# Named Entity Recognition (NER) with BERT
 
 This project demonstrates how to fine-tune a BERT model for Named Entity Recognition (NER) using Hugging Face Transformers and PyTorch. The model is trained to recognize named entities such as people, organizations, and locations in text using a BIO tagging scheme.
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 ner/
@@ -16,7 +16,7 @@ ner/
 
 ---
 
-## 📊 Dataset Description
+## Dataset Description
 
 - **Format**: The training data is in CSV format with fields:
   - `sentence`: A raw text sentence.
@@ -30,7 +30,7 @@ ner/
 
 ---
 
-## 🏗️ Preprocessing Pipeline
+## Preprocessing Pipeline
 
 1. Convert string labels to lists using `ast.literal_eval`.
 2. Map tag strings to numerical IDs using a custom `label_map`.
@@ -47,7 +47,7 @@ label_map = {
 
 ---
 
-## 🧾 Dataset Loader
+## Dataset Loader
 
 A custom PyTorch `Dataset` class (`SentimentDataset`) prepares tokenized inputs and aligns token-level labels. It returns a dictionary containing:
 
@@ -57,7 +57,7 @@ A custom PyTorch `Dataset` class (`SentimentDataset`) prepares tokenized inputs 
 
 ---
 
-## 🧠 Model Training
+## Model Training
 
 - **Model**: `BertForTokenClassification` with 7 output labels.
 - **Loss Function**: Cross-entropy, ignoring tokens with label `-100`.
@@ -65,7 +65,7 @@ A custom PyTorch `Dataset` class (`SentimentDataset`) prepares tokenized inputs 
 - **Epochs**: 20
 - **Batch Size**: 8
 
-### 🔁 Training Loop
+### Training Loop
 
 ```python
 for epoch in range(epochs):
@@ -75,7 +75,7 @@ for epoch in range(epochs):
         ...
 ```
 
-### ✅ Evaluation
+### Evaluation
 
 During evaluation, tokens labeled with `-100` are excluded. Accuracy is computed as the ratio of correctly predicted valid tokens.
 
@@ -86,7 +86,7 @@ print(f"Test Accuracy: {accuracy:.4f}")
 
 ---
 
-## 💾 Saving the Model
+## Saving the Model
 
 The model and tokenizer are saved to disk for later inference:
 
@@ -97,7 +97,7 @@ tokenizer.save_pretrained('./ner/ner_transformer_model')
 
 ---
 
-## 🔍 Evaluation on JSON Entity Data
+## Evaluation on JSON Entity Data
 
 A separate evaluation phase is performed on a JSON-formatted dataset containing sentence text and entity annotations.
 
@@ -107,7 +107,7 @@ A separate evaluation phase is performed on a JSON-formatted dataset containing 
 - Predictions are mapped back to human-readable NER tags.
 - `classification_report` from `sklearn` gives detailed precision, recall, and F1-scores.
 
-### 📈 Sample Output
+### Sample Output
 
 ```
               precision    recall  f1-score   support
@@ -122,7 +122,7 @@ A separate evaluation phase is performed on a JSON-formatted dataset containing 
 
 ---
 
-## 🧪 Example Inference
+## Example Inference
 
 Prints actual tokens along with their predicted and ground truth labels for manual inspection.
 
@@ -134,7 +134,7 @@ print("Actual:   ", true_labels.tolist())
 
 ---
 
-## 🧰 Dependencies
+## Dependencies
 
 Make sure to install the following Python packages:
 
@@ -144,7 +144,7 @@ pip install torch transformers pandas scikit-learn
 
 ---
 
-## 📌 Key Concepts Demonstrated
+## Key Concepts Demonstrated
 
 - Token classification using Hugging Face Transformers
 - Handling subword alignment for token-level NER tasks
@@ -153,10 +153,7 @@ pip install torch transformers pandas scikit-learn
 
 ---
 
-## 📎 License
+## Author
 
-MIT License © 2025
+Developed by [Arunima Surendran](https://github.com/arunimakanavu)
 
----
-
-For questions or issues, please open an [issue](https://github.com/your-repo/issues) or contact the author.
